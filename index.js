@@ -54,8 +54,9 @@ function desencriptar() {
 
 //funcion de copiar texto
    function CopiarTexto() {
-   var contenido = document.querySelector("texto").value;
-   contenido.select();
-   navigator.clipboard.read();
-   swal("Texto copiado");
+    const mensaje = document.querySelector("texto");
+    texto.select();
+    navigator.clipboard.writeText(texto.value)
+    texto.value = "";
+    swal("Texto Copiado")
   }
